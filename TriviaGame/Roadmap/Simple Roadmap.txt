@@ -1,0 +1,18 @@
+//This is a quick jot-down of my plans. If need be, I can turn this into an excel or other official plans sheet later.
+
+
+Short Term Plans:
+	-Add option to set question category to question editor
+	-Create category editor so new categories can be added
+	-Populate trivia list with questions
+	-Check if question and answer text can be set to automatically wrap at text box instead of using slider
+
+Long Term Plans:
+	-Create game application so trivia games can be played
+			-Show question, answer is hidden until "Show Answer" button is pressed
+			-Once answer is shown, game asks if player got question correct
+			-Player can then hit "Next Question" to get next question
+			-Add hashing feature so questions are given in a random order
+	-Add game table so application have multiple pre-stored games, each with their own preset categories and questions
+	-Add different playmodes such as a point system for multiplayer
+	
