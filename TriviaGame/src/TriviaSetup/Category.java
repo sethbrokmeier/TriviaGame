@@ -90,6 +90,10 @@ public class Category {
     public void setDescription(String setter){
         strDescription = setter;
     }
+    public String toString(){
+        
+        return strDescription;
+    }
     
     public void updateCategoryInfo(){
         
