@@ -20,6 +20,7 @@ public class CategoryList {
     // class variables (global)
     public DefaultListModel model;
     public DefaultComboBoxModel model2;
+    public Category newcat;
     
     public CategoryList(){
         //get info from database and load variables
@@ -38,15 +39,16 @@ public class CategoryList {
             Statement st = conn.createStatement();
 
             //create result set (executes SQL)
-            ResultSet rs = st.executeQuery("SELECT CategoryID, Description FROM Categories ORDER BY CategoryID");
+            ResultSet rs = st.executeQuery("SELECT CategoryID FROM Categories ORDER BY CategoryID");
 
             //loop to load class variables from result set
             model = new DefaultListModel();
             model2 = new DefaultComboBoxModel();
             while(rs.next())
             {
-                model.addElement(rs.getString("Description"));
-                model2.addElement(rs.getString("Description"));
+                newcat = new Category(rs.getInt("CategoryID"));
+                model.addElement(newcat);
+                model2.addElement(newcat);
             }
 
             //close stuff
